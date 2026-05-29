@@ -1,0 +1,33 @@
+/* ============================================================
+   LEGAL — Mentions légales
+   ============================================================ */
+
+.legal-content { background: var(--cream); }
+
+.legal-block {
+  padding: var(--s4) 0;
+  border-bottom: 1px solid var(--cream-deep);
+}
+
+.legal-block:last-child { border-bottom: none; }
+
+.legal-block h2 {
+  font-size: 1.2rem;
+  margin-bottom: var(--s2);
+}
+
+.legal-block p {
+  font-size: 0.9rem;
+  color: var(--grey-mid);
+  line-height: 1.8;
+}
+
+.legal-block a {
+  color: var(--rust);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-block a:hover { color: var(--rust-dark); }
+
+.legal-block strong { color: var(--black); font-weight: 600; }

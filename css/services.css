@@ -1,0 +1,171 @@
+/* ============================================================
+   SERVICES — Styles de la page services.html
+   (page-header est réutilisé sur toutes les pages intérieures)
+   ============================================================ */
+
+/* ── Page header partagé ── */
+.page-header {
+  padding: calc(var(--nav-h) + var(--s6)) 0 var(--s5);
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.page-header__left {
+  max-width: 640px;
+}
+
+.page-header__left .label {
+  margin-bottom: var(--s2);
+}
+
+.page-header__left h1 {
+  margin-bottom: var(--s2);
+}
+
+.page-header__left p {
+  font-size: 1.1rem;
+  color: var(--grey-mid);
+}
+
+.page-header__right {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 4px;
+}
+
+.page-header__number {
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 14vw, 14rem);
+  font-weight: 900;
+  color: rgba(26,26,26,0.05);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  user-select: none;
+}
+
+/* ── Service row ── */
+.service-row {
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+  gap: var(--s5);
+  align-items: start;
+  padding: var(--s6) 0;
+}
+
+.service-row__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s2);
+  padding-top: 6px;
+}
+
+.service-row__num {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(26,26,26,0.06);
+  line-height: 1;
+}
+
+.service-row__content h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: var(--s2);
+}
+
+.service-row__lead {
+  font-size: 1.1rem;
+  color: var(--grey-mid);
+  margin-bottom: var(--s4);
+  max-width: 560px;
+}
+
+.service-row__details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s4);
+  border-top: 1px solid var(--cream-deep);
+  padding-top: var(--s4);
+}
+
+.service-row__detail h4 {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+
+.service-row__detail p {
+  font-size: 0.875rem;
+  color: var(--grey-mid);
+  line-height: 1.7;
+}
+
+.service-row__cta {
+  padding-top: 8px;
+  flex-shrink: 0;
+}
+
+/* ── CTA band (partagé, déjà dans home.css mais repris ici pour les autres pages) ── */
+.cta-band {
+  background: var(--black);
+  padding: var(--s6) 0;
+}
+
+.cta-band__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s4);
+  flex-wrap: wrap;
+}
+
+.cta-band__text h2 {
+  color: var(--cream);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+}
+
+.cta-band__text h2 em {
+  color: var(--rust-light);
+  font-style: italic;
+}
+
+.cta-band__action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--s1);
+}
+
+.cta-band__action p {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--grey-mid);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .service-row { grid-template-columns: 100px 1fr; }
+  .service-row__cta { grid-column: 2; }
+  .service-row__details { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .page-header__right { display: none; }
+  .service-row { grid-template-columns: 1fr; gap: var(--s3); }
+  .service-row__meta { flex-direction: row; align-items: center; }
+  .service-row__num { font-size: 2.5rem; }
+  .service-row__details { grid-template-columns: 1fr; gap: var(--s3); }
+  .cta-band__inner { flex-direction: column; align-items: flex-start; }
+  .cta-band__action { align-items: flex-start; }
+}

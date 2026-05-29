@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — 404avenue</title>
+  <meta name="description" content="Contactez 404avenue pour démarrer votre projet de site web. Réponse sous 24h.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <div class="page-transition active"></div>
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span>404avenue</a>
+      <ul class="nav__links">
+        <li><a href="index.html"     class="nav__link">Accueil</a></li>
+        <li><a href="services.html"  class="nav__link">Services</a></li>
+        <li><a href="tarifs.html"    class="nav__link">Tarifs</a></li>
+        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="contact.html"   class="nav__cta">Démarrer →</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html"     class="nav__link">Accueil</a>
+    <a href="services.html"  class="nav__link">Services</a>
+    <a href="tarifs.html"    class="nav__link">Tarifs</a>
+    <a href="portfolio.html" class="nav__link">Portfolio</a>
+    <a href="contact.html"   class="btn btn--rust">Démarrer →</a>
+  </div>
+
+  <main>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header__inner">
+          <div class="page-header__left reveal">
+            <span class="label">Parlons-en</span>
+            <h1>Démarrons<br><em style="color:var(--rust)">votre projet.</em></h1>
+            <p>Décrivez votre activité, vos besoins, votre budget. On vous répond sous 24h avec une proposition claire.</p>
+          </div>
+          <div class="page-header__right reveal reveal--delay-2" aria-hidden="true">
+            <span class="page-header__number">05</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══ CONTACT LAYOUT ══ -->
+    <section class="section contact-layout">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- ── Formulaire ── -->
+          <div class="contact-form-wrap reveal">
+            <form class="contact-form" id="contactForm" name="contact" netlify novalidate aria-label="Formulaire de contact">
+          <input type="hidden" name="form-name" value="contact">
+            
+
+              <div class="form-row form-row--2">
+                <div class="form-field">
+                  <label for="prenom" class="form-label">Prénom <span aria-hidden="true">*</span></label>
+                  <input type="text" id="prenom" name="prenom" class="form-input" placeholder="Jean" required autocomplete="given-name">
+                </div>
+                <div class="form-field">
+                  <label for="nom" class="form-label">Nom <span aria-hidden="true">*</span></label>
+                  <input type="text" id="nom" name="nom" class="form-input" placeholder="Dupont" required autocomplete="family-name">
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="email" class="form-label">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="jean.dupont@exemple.fr" required autocomplete="email">
+              </div>
+
+              <div class="form-field">
+                <label for="entreprise" class="form-label">Nom de votre entreprise</label>
+                <input type="text" id="entreprise" name="entreprise" class="form-input" placeholder="Ma Boulangerie SARL" autocomplete="organization">
+              </div>
+
+              <div class="form-field">
+                <label for="offre" class="form-label">Formule qui vous intéresse</label>
+                <select id="offre" name="offre" class="form-input form-select">
+                  <option value="">Choisir une formule…</option>
+                  <option value="essentiel">Essentiel — 49,90€/mois</option>
+                  <option value="business">Business — 89,90€/mois</option>
+                  <option value="mesure">Sur mesure — devis personnalisé</option>
+                  <option value="info">Je veux juste des informations</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="message" class="form-label">Votre projet <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Décrivez votre activité, ce que vous attendez de votre site, vos délais éventuels…" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--rust contact-submit">
+                Envoyer le message →
+              </button>
+
+              <div class="contact-form__success" id="formSuccess" role="alert" aria-live="polite" hidden>
+                <strong>Message envoyé !</strong> On vous répond dans les 24h.
+              </div>
+
+            </form>
+          </div>
+
+          <!-- ── Infos ── -->
+          <aside class="contact-info reveal reveal--delay-2">
+            <div class="contact-info__block">
+              <span class="label">Email</span>
+              <a href="mailto:hello@404avenue.com" class="contact-info__link">hello@404avenue.com</a>
+            </div>
+
+            <div class="contact-info__block">
+              <span class="label">Réponse garantie</span>
+              <p class="contact-info__value">Sous 24h en semaine</p>
+            </div>
+
+            <div class="contact-info__block">
+              <span class="label">Livraison</span>
+              <p class="contact-info__value">48h après validation du devis</p>
+            </div>
+
+            <div class="divider" style="margin: var(--s3) 0;"></div>
+
+            <div class="contact-info__reassurance">
+              <div class="reassurance-item">
+                <span class="reassurance-icon" aria-hidden="true">✦</span>
+                <p>Pas d'engagement minimum — résiliation à tout moment</p>
+              </div>
+              <div class="reassurance-item">
+                <span class="reassurance-icon" aria-hidden="true">✦</span>
+                <p>Devis gratuit et sans obligation</p>
+              </div>
+              <div class="reassurance-item">
+                <span class="reassurance-icon" aria-hidden="true">✦</span>
+                <p>Vous restez propriétaire de votre site</p>
+              </div>
+            </div>
+
+            <div class="divider" style="margin: var(--s3) 0;"></div>
+
+            <div class="contact-info__block">
+              <span class="label">On travaille avec</span>
+              <p class="contact-info__value" style="font-size:0.875rem; color:var(--grey-mid);">Restaurants · Artisans · Commerces locaux · PME · Professions libérales</p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span>404avenue</a>
+          <p>L'agence web qui crée, héberge et entretient votre site. Un abonnement mensuel, tout inclus.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Services</p>
+          <ul class="footer__links">
+            <li><a href="services.html">Création de site</a></li>
+            <li><a href="services.html">Hébergement</a></li>
+            <li><a href="services.html">Nom de domaine</a></li>
+            <li><a href="services.html">Maintenance & SAV</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@404avenue.com">hello@404avenue.com</a></li>
+            <li><a href="contact.html">Formulaire de contact</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2025 404avenue · Tous droits réservés</span>
+        <div class="footer__rust"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

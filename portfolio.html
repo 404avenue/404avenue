@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — 404avenue</title>
+  <meta name="description" content="Découvrez les réalisations de 404avenue : sites web créés pour des PME, commerces et indépendants.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+
+  <div class="page-transition active"></div>
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span>404avenue</a>
+      <ul class="nav__links">
+        <li><a href="index.html"     class="nav__link">Accueil</a></li>
+        <li><a href="services.html"  class="nav__link">Services</a></li>
+        <li><a href="tarifs.html"    class="nav__link">Tarifs</a></li>
+        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="contact.html"   class="nav__cta">Démarrer →</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html"     class="nav__link">Accueil</a>
+    <a href="services.html"  class="nav__link">Services</a>
+    <a href="tarifs.html"    class="nav__link">Tarifs</a>
+    <a href="portfolio.html" class="nav__link">Portfolio</a>
+    <a href="contact.html"   class="btn btn--rust">Démarrer →</a>
+  </div>
+
+  <main>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header__inner">
+          <div class="page-header__left reveal">
+            <span class="label">Nos réalisations</span>
+            <h1>Le travail parle.</h1>
+            <p>Chaque site est unique, construit sur-mesure pour l'activité et les clients de chaque entreprise.</p>
+          </div>
+          <div class="page-header__right reveal reveal--delay-2" aria-hidden="true">
+            <span class="page-header__number">04</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══ FILTRES ══ -->
+    <section class="section--sm portfolio-filters">
+      <div class="container">
+        <div class="filters" role="group" aria-label="Filtrer par catégorie">
+          <button class="filter-btn filter-btn--active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="commerce">Commerce & Artisan</button>
+          <button class="filter-btn" data-filter="pme">PME</button>
+          <button class="filter-btn" data-filter="restaurant">Restaurant & Food</button>
+          <button class="filter-btn" data-filter="service">Services</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ GRILLE PROJETS ══ -->
+    <section class="portfolio-grid-section" aria-labelledby="portfolio-title">
+      <div class="container">
+        <div class="portfolio-grid" id="portfolio-grid">
+
+          <!-- Projet 1 — placeholder, à remplacer par vrai projet -->
+          <article class="portfolio-card reveal" data-category="commerce" aria-label="Projet Boulangerie Leclerc">
+            <div class="portfolio-card__thumb portfolio-card__thumb--a">
+              <div class="portfolio-card__thumb-inner">
+                <span class="portfolio-card__placeholder-text" aria-hidden="true">Boulangerie<br>Leclerc</span>
+              </div>
+              <a href="#" class="portfolio-card__overlay" aria-label="Voir le site Boulangerie Leclerc">
+                <span>Voir le site →</span>
+              </a>
+            </div>
+            <div class="portfolio-card__info">
+              <div class="portfolio-card__meta">
+                <span class="tag">Commerce</span>
+                <span class="portfolio-card__year">2025</span>
+              </div>
+              <h3 class="portfolio-card__title">Boulangerie Leclerc</h3>
+              <p class="portfolio-card__desc">Site vitrine avec carte des produits, horaires et formulaire de commande.</p>
+              <div class="portfolio-card__stack">HTML · CSS · Formulaire</div>
+            </div>
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="portfolio-card portfolio-card--wide reveal reveal--delay-1" data-category="pme" aria-label="Projet Menuiserie Durand">
+            <div class="portfolio-card__thumb portfolio-card__thumb--b">
+              <div class="portfolio-card__thumb-inner">
+                <span class="portfolio-card__placeholder-text" aria-hidden="true">Menuiserie<br>Durand</span>
+              </div>
+              <a href="#" class="portfolio-card__overlay" aria-label="Voir le site Menuiserie Durand">
+                <span>Voir le site →</span>
+              </a>
+            </div>
+            <div class="portfolio-card__info">
+              <div class="portfolio-card__meta">
+                <span class="tag">PME</span>
+                <span class="portfolio-card__year">2025</span>
+              </div>
+              <h3 class="portfolio-card__title">Menuiserie Durand</h3>
+              <p class="portfolio-card__desc">Présentation de l'activité, galerie de réalisations et demande de devis en ligne.</p>
+              <div class="portfolio-card__stack">HTML · CSS · Galerie</div>
+            </div>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="portfolio-card reveal reveal--delay-2" data-category="restaurant" aria-label="Projet Le Vieux Moulin">
+            <div class="portfolio-card__thumb portfolio-card__thumb--c">
+              <div class="portfolio-card__thumb-inner">
+                <span class="portfolio-card__placeholder-text" aria-hidden="true">Le Vieux<br>Moulin</span>
+              </div>
+              <a href="#" class="portfolio-card__overlay" aria-label="Voir le site Le Vieux Moulin">
+                <span>Voir le site →</span>
+              </a>
+            </div>
+            <div class="portfolio-card__info">
+              <div class="portfolio-card__meta">
+                <span class="tag">Restaurant</span>
+                <span class="portfolio-card__year">2025</span>
+              </div>
+              <h3 class="portfolio-card__title">Le Vieux Moulin</h3>
+              <p class="portfolio-card__desc">Site restaurant avec menu, réservation et galerie photos.</p>
+              <div class="portfolio-card__stack">HTML · CSS · Réservation</div>
+            </div>
+          </article>
+
+          <!-- Projet 4 -->
+          <article class="portfolio-card reveal" data-category="service" aria-label="Projet Cabinet Moreau">
+            <div class="portfolio-card__thumb portfolio-card__thumb--d">
+              <div class="portfolio-card__thumb-inner">
+                <span class="portfolio-card__placeholder-text" aria-hidden="true">Cabinet<br>Moreau</span>
+              </div>
+              <a href="#" class="portfolio-card__overlay" aria-label="Voir le site Cabinet Moreau">
+                <span>Voir le site →</span>
+              </a>
+            </div>
+            <div class="portfolio-card__info">
+              <div class="portfolio-card__meta">
+                <span class="tag">Services</span>
+                <span class="portfolio-card__year">2025</span>
+              </div>
+              <h3 class="portfolio-card__title">Cabinet Moreau</h3>
+              <p class="portfolio-card__desc">Site professionnel pour un cabinet de conseil avec prise de contact sécurisée.</p>
+              <div class="portfolio-card__stack">HTML · CSS · Contact</div>
+            </div>
+          </article>
+
+          <!-- Projet 5 -->
+          <article class="portfolio-card portfolio-card--wide reveal reveal--delay-1" data-category="commerce" aria-label="Projet Fleuriste Pétale">
+            <div class="portfolio-card__thumb portfolio-card__thumb--e">
+              <div class="portfolio-card__thumb-inner">
+                <span class="portfolio-card__placeholder-text" aria-hidden="true">Fleuriste<br>Pétale</span>
+              </div>
+              <a href="#" class="portfolio-card__overlay" aria-label="Voir le site Fleuriste Pétale">
+                <span>Voir le site →</span>
+              </a>
+            </div>
+            <div class="portfolio-card__info">
+              <div class="portfolio-card__meta">
+                <span class="tag">Commerce</span>
+                <span class="portfolio-card__year">2025</span>
+              </div>
+              <h3 class="portfolio-card__title">Fleuriste Pétale</h3>
+              <p class="portfolio-card__desc">Boutique en ligne pour fleuriste local avec catalogue et commande par message.</p>
+              <div class="portfolio-card__stack">HTML · CSS · E-shop léger</div>
+            </div>
+          </article>
+
+          <!-- Projet 6 -->
+          <article class="portfolio-card reveal reveal--delay-2" data-category="pme" aria-label="Projet BTP Renaud">
+            <div class="portfolio-card__thumb portfolio-card__thumb--f">
+              <div class="portfolio-card__thumb-inner">
+                <span class="portfolio-card__placeholder-text" aria-hidden="true">BTP<br>Renaud</span>
+              </div>
+              <a href="#" class="portfolio-card__overlay" aria-label="Voir le site BTP Renaud">
+                <span>Voir le site →</span>
+              </a>
+            </div>
+            <div class="portfolio-card__info">
+              <div class="portfolio-card__meta">
+                <span class="tag">PME</span>
+                <span class="portfolio-card__year">2025</span>
+              </div>
+              <h3 class="portfolio-card__title">BTP Renaud</h3>
+              <p class="portfolio-card__desc">Entreprise de BTP — présentation des services, zone d'intervention et galerie chantiers.</p>
+              <div class="portfolio-card__stack">HTML · CSS · Galerie</div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="portfolio-note reveal">Ces projets sont des exemples illustratifs. Votre réalisation sera ajoutée ici dès la mise en ligne.</p>
+      </div>
+    </section>
+
+    <!-- ══ CTA ══ -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__inner">
+          <div class="cta-band__text reveal">
+            <h2>Votre projet sera<br><em>le prochain.</em></h2>
+          </div>
+          <div class="cta-band__action reveal reveal--delay-2">
+            <a href="contact.html" class="btn btn--rust">Démarrer maintenant →</a>
+            <p>Réponse sous 24h · Sans engagement</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span>404avenue</a>
+          <p>L'agence web qui crée, héberge et entretient votre site. Un abonnement mensuel, tout inclus.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Services</p>
+          <ul class="footer__links">
+            <li><a href="services.html">Création de site</a></li>
+            <li><a href="services.html">Hébergement</a></li>
+            <li><a href="services.html">Nom de domaine</a></li>
+            <li><a href="services.html">Maintenance & SAV</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@404avenue.com">hello@404avenue.com</a></li>
+            <li><a href="contact.html">Formulaire de contact</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2025 404avenue · Tous droits réservés</span>
+        <div class="footer__rust"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+</html>

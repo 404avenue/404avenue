@@ -1,0 +1,216 @@
+/* ============================================================
+   HOME — Styles spécifiques à index.html
+   ============================================================ */
+
+/* ── Stats ── */
+.stats {
+  background: var(--cream-dark);
+  border-top: 1px solid var(--cream-deep);
+  border-bottom: 1px solid var(--cream-deep);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 0;
+  padding: var(--s4) 0;
+}
+
+.divider-v {
+  width: 1px;
+  height: 60px;
+  background: var(--cream-deep);
+}
+
+.stat {
+  padding: var(--s3) var(--s4);
+  text-align: center;
+}
+
+/* ── Services aperçu ── */
+.services-home__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s4);
+  margin-bottom: var(--s4);
+}
+
+.services-home__card {
+  background: var(--white);
+  border: 1px solid var(--cream-deep);
+  border-radius: var(--radius-md);
+  padding: var(--s4);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow var(--dur-mid) var(--ease),
+              transform var(--dur-mid) var(--ease);
+}
+
+.services-home__card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--rust);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-mid) var(--ease);
+}
+
+.services-home__card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.services-home__card:hover::before {
+  transform: scaleX(1);
+}
+
+.services-home__card-num {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(26,26,26,0.06);
+  line-height: 1;
+  margin-bottom: var(--s3);
+}
+
+.services-home__card-body h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--s1);
+}
+
+.services-home__card-body p {
+  font-size: 0.9rem;
+  color: var(--grey-mid);
+  margin-bottom: var(--s2);
+}
+
+.services-home__more {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rust);
+  transition: gap var(--dur-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.services-home__more:hover {
+  gap: 10px;
+}
+
+.services-home__cta {
+  text-align: center;
+  margin-top: var(--s4);
+}
+
+/* ── Pourquoi nous ── */
+.why { background: var(--cream-dark); }
+
+.why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--s7);
+  align-items: start;
+}
+
+.why__left h2 { margin-bottom: var(--s2); }
+.why__left h2 em { font-style: italic; color: var(--rust); }
+.why__left p { margin-bottom: var(--s3); }
+
+.why__right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  padding-top: var(--s5);
+}
+
+.why__item {
+  display: flex;
+  gap: var(--s3);
+  align-items: flex-start;
+}
+
+.why__icon {
+  color: var(--rust);
+  font-size: 1.1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.why__item h4 {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--black);
+}
+
+.why__item p {
+  font-size: 0.9rem;
+  color: var(--grey-mid);
+}
+
+/* ── CTA Bande ── */
+.cta-band {
+  background: var(--black);
+  padding: var(--s6) 0;
+}
+
+.cta-band__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s4);
+  flex-wrap: wrap;
+}
+
+.cta-band__text h2 {
+  color: var(--cream);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+}
+
+.cta-band__text h2 em {
+  color: var(--rust-light);
+  font-style: italic;
+}
+
+.cta-band__action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--s1);
+}
+
+.cta-band__action p {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--grey-mid);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .why__inner { grid-template-columns: 1fr; gap: var(--s5); }
+}
+
+@media (max-width: 768px) {
+  .stats__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--cream-deep);
+  }
+  .divider-v { display: none; }
+  .stat { background: var(--cream-dark); }
+  .services-home__grid { grid-template-columns: 1fr; }
+  .cta-band__inner { flex-direction: column; align-items: flex-start; }
+  .cta-band__action { align-items: flex-start; }
+}

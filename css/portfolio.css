@@ -1,0 +1,205 @@
+/* ============================================================
+   PORTFOLIO — Styles de la page portfolio.html
+   ============================================================ */
+
+/* ── Filtres ── */
+.portfolio-filters {
+  border-bottom: 1px solid var(--cream-deep);
+  background: var(--cream);
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  padding: var(--s2) 0;
+}
+
+.filter-btn {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--cream-deep);
+  background: transparent;
+  color: var(--grey-mid);
+  transition: all var(--dur-fast) var(--ease);
+}
+
+.filter-btn:hover {
+  border-color: var(--black);
+  color: var(--black);
+}
+
+.filter-btn--active {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--cream);
+}
+
+/* ── Grille ── */
+.portfolio-grid-section {
+  padding: var(--s5) 0 var(--s6);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s3);
+}
+
+.portfolio-card--wide {
+  grid-column: span 2;
+}
+
+/* ── Card ── */
+.portfolio-card {
+  background: var(--white);
+  border: 1px solid var(--cream-deep);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: box-shadow var(--dur-mid) var(--ease),
+              transform var(--dur-mid) var(--ease),
+              opacity var(--dur-mid) var(--ease);
+}
+
+.portfolio-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.portfolio-card.hidden {
+  display: none;
+}
+
+/* ── Thumbnail placeholder ── */
+.portfolio-card__thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.portfolio-card--wide .portfolio-card__thumb {
+  aspect-ratio: 21 / 9;
+}
+
+.portfolio-card__thumb-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--s3);
+}
+
+/* Couleurs de placeholder pour chaque projet */
+.portfolio-card__thumb--a { background: #2C2C2C; }
+.portfolio-card__thumb--b { background: #4A3728; }
+.portfolio-card__thumb--c { background: #3D4A2F; }
+.portfolio-card__thumb--d { background: #2A2A3E; }
+.portfolio-card__thumb--e { background: #4A2C2C; }
+.portfolio-card__thumb--f { background: #2C3A2C; }
+
+.portfolio-card__placeholder-text {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgba(247,242,235,0.15);
+  line-height: 1.2;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ── Overlay hover ── */
+.portfolio-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(216, 90, 48, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--dur-mid) var(--ease);
+}
+
+.portfolio-card__overlay span {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.portfolio-card:hover .portfolio-card__overlay {
+  opacity: 1;
+}
+
+/* ── Infos ── */
+.portfolio-card__info {
+  padding: var(--s3);
+}
+
+.portfolio-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.portfolio-card__year {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--grey-mid);
+  letter-spacing: 0.08em;
+}
+
+.portfolio-card__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--black);
+}
+
+.portfolio-card__desc {
+  font-size: 0.875rem;
+  color: var(--grey-mid);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.portfolio-card__stack {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey-light);
+}
+
+/* ── Note de bas ── */
+.portfolio-note {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--grey-light);
+  font-style: italic;
+  margin-top: var(--s4);
+  padding-top: var(--s4);
+  border-top: 1px solid var(--cream-deep);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-card--wide { grid-column: span 2; }
+}
+
+@media (max-width: 640px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .portfolio-card--wide { grid-column: span 1; }
+  .portfolio-card--wide .portfolio-card__thumb { aspect-ratio: 16 / 9; }
+}

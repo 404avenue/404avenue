@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404avenue — Création de sites web pour PME</title>
+  <meta name="description" content="404avenue crée des sites web professionnels pour les PME et commerces locaux. Design sur-mesure, hébergement, domaine et SAV inclus dans un abonnement mensuel.">
+  <meta property="og:title" content="404avenue — Création de sites web pour PME">
+  <meta property="og:description" content="Votre site web professionnel, hébergement et SAV inclus. Un abonnement mensuel simple.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.404avenue.com">
+  <link rel="canonical" href="https://www.404avenue.com">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- Page transition -->
+  <div class="page-transition active"></div>
+
+  <!-- Curseur custom -->
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ══ NAVIGATION ══════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="404avenue — accueil">
+        <span class="nav__logo-dot"></span>
+        404avenue
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"     class="nav__link">Accueil</a></li>
+        <li><a href="services.html"  class="nav__link">Services</a></li>
+        <li><a href="tarifs.html"    class="nav__link">Tarifs</a></li>
+        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="contact.html"   class="nav__cta">Démarrer →</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu mobile -->
+  <div class="nav__mobile" role="dialog" aria-label="Navigation mobile">
+    <a href="index.html"     class="nav__link">Accueil</a>
+    <a href="services.html"  class="nav__link">Services</a>
+    <a href="tarifs.html"    class="nav__link">Tarifs</a>
+    <a href="portfolio.html" class="nav__link">Portfolio</a>
+    <a href="contact.html"   class="btn btn--rust">Démarrer →</a>
+  </div>
+
+  <main>
+
+    <!-- ══ HERO ════════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg">
+        <div class="hero__bg-line"></div>
+      </div>
+      <div class="hero__number" aria-hidden="true">404</div>
+
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__eyebrow">
+            <span class="hero__eyebrow-line"></span>
+            <span class="label">Agence web · France</span>
+          </div>
+
+          <h1 id="hero-title" class="hero__title">
+            Votre site web,<br>
+            <em>pensé pour durer.</em>
+          </h1>
+
+          <p class="hero__subtitle">
+            On crée, héberge et entretient votre site internet. Vous vous concentrez sur votre métier.
+          </p>
+
+          <div class="hero__actions">
+            <a href="contact.html" class="btn btn--rust">Démarrer un projet →</a>
+            <a href="portfolio.html" class="btn btn--outline">Voir le portfolio</a>
+          </div>
+
+          <div class="hero__scroll" aria-hidden="true">
+            <span class="hero__scroll-line"></span>
+            Défiler
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ STATS ═══════════════════════════════════════════ -->
+    <section class="stats section--sm" aria-label="Chiffres clés">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat reveal">
+            <div class="stat__num"><span data-count="48" data-suffix="">48</span><span>h</span></div>
+            <div class="stat__label">Délai de livraison</div>
+          </div>
+          <div class="divider-v" aria-hidden="true"></div>
+          <div class="stat reveal reveal--delay-1">
+            <div class="stat__num"><span data-count="24" data-suffix="">24</span><span>h</span></div>
+            <div class="stat__label">SAV garanti</div>
+          </div>
+          <div class="divider-v" aria-hidden="true"></div>
+          <div class="stat reveal reveal--delay-2">
+            <div class="stat__num"><span data-count="100" data-suffix="%">100%</span></div>
+            <div class="stat__label">Hébergement inclus</div>
+          </div>
+          <div class="divider-v" aria-hidden="true"></div>
+          <div class="stat reveal reveal--delay-3">
+            <div class="stat__num">1</div>
+            <div class="stat__label">Abonnement tout inclus</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══ SERVICES APERÇU ══════════════════════════════════ -->
+    <section class="section services-home" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Ce qu'on fait</span>
+          <h2 id="services-title">Une agence complète,<br><em>une facture simple.</em></h2>
+          <p>Création, hébergement, domaine, maintenance et SAV — tout est compris. Pas de surprise, pas d'extras cachés.</p>
+        </div>
+
+        <div class="services-home__grid">
+          <article class="services-home__card reveal" aria-label="Service création">
+            <div class="services-home__card-num" aria-hidden="true">01</div>
+            <div class="services-home__card-body">
+              <h3>Création sur-mesure</h3>
+              <p>Un site unique, pensé pour votre activité, livré en 48h. Design professionnel, responsive et optimisé.</p>
+              <a href="services.html" class="services-home__more">Voir le détail →</a>
+            </div>
+          </article>
+
+          <article class="services-home__card reveal reveal--delay-1" aria-label="Service hébergement">
+            <div class="services-home__card-num" aria-hidden="true">02</div>
+            <div class="services-home__card-body">
+              <h3>Hébergement & domaine</h3>
+              <p>Votre site en ligne, votre nom de domaine géré, les mises à jour techniques assurées. On s'en occupe.</p>
+              <a href="services.html" class="services-home__more">Voir le détail →</a>
+            </div>
+          </article>
+
+          <article class="services-home__card reveal reveal--delay-2" aria-label="Service SAV">
+            <div class="services-home__card-num" aria-hidden="true">03</div>
+            <div class="services-home__card-body">
+              <h3>SAV & maintenance</h3>
+              <p>Besoin de modifier un texte, une photo, un horaire ? On répond sous 24h. Inclus dans votre abonnement.</p>
+              <a href="services.html" class="services-home__more">Voir le détail →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="services-home__cta reveal">
+          <a href="services.html" class="btn btn--outline">Découvrir tous les services →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══ POURQUOI 404AVENUE ══════════════════════════════ -->
+    <section class="section why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="why__inner">
+          <div class="why__left reveal">
+            <span class="label">Pourquoi nous</span>
+            <h2 id="why-title">L'agence web<br>sans les pièges.</h2>
+            <p>Pas de devis à 5 000 € qu'on ne comprend pas. Pas de contrat technique incompréhensible. Juste un site qui marche, un prix clair, et quelqu'un à qui parler.</p>
+            <a href="tarifs.html" class="btn btn--rust" style="margin-top: var(--s3);">Voir les tarifs →</a>
+          </div>
+          <div class="why__right">
+            <div class="why__item reveal reveal--delay-1">
+              <div class="why__icon" aria-hidden="true">✦</div>
+              <div>
+                <h4>Prix transparent</h4>
+                <p>Création sur devis + abonnement mensuel fixe. Vous savez exactement ce que vous payez chaque mois.</p>
+              </div>
+            </div>
+            <div class="why__item reveal reveal--delay-2">
+              <div class="why__icon" aria-hidden="true">✦</div>
+              <div>
+                <h4>Livraison en 48h</h4>
+                <p>Pas de projet qui traîne des mois. On s'engage sur un délai et on le tient.</p>
+              </div>
+            </div>
+            <div class="why__item reveal reveal--delay-3">
+              <div class="why__icon" aria-hidden="true">✦</div>
+              <div>
+                <h4>Un interlocuteur unique</h4>
+                <p>Une agence humaine, pas une plateforme. On se parle, on comprend votre activité.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CTA BANDE ═════════════════════════════════════════ -->
+    <section class="cta-band" aria-label="Appel à l'action">
+      <div class="container">
+        <div class="cta-band__inner">
+          <div class="cta-band__text reveal">
+            <h2>Votre site web,<br><em>dès cette semaine.</em></h2>
+          </div>
+          <div class="cta-band__action reveal reveal--delay-2">
+            <a href="contact.html" class="btn btn--rust">Démarrer maintenant →</a>
+            <p>Réponse sous 24h · Sans engagement</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">
+            <span class="nav__logo-dot"></span>
+            404avenue
+          </a>
+          <p>L'agence web qui crée, héberge et entretient votre site. Un abonnement mensuel, tout inclus.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Services</p>
+          <ul class="footer__links">
+            <li><a href="services.html">Création de site</a></li>
+            <li><a href="services.html">Hébergement</a></li>
+            <li><a href="services.html">Nom de domaine</a></li>
+            <li><a href="services.html">Maintenance & SAV</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@404avenue.com">hello@404avenue.com</a></li>
+            <li><a href="contact.html">Formulaire de contact</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2025 404avenue · Tous droits réservés</span>
+        <div class="footer__rust"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
