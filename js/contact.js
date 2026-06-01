@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     let valid = true;
 
-    // Validation basique
     required.forEach(field => {
       field.classList.remove('error');
       if (!field.value.trim()) {
@@ -28,28 +27,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (!valid) {
-      const firstError = form.querySelector('.error');
-      if (firstError) firstError.focus();
+      form.querySelector('.error')?.focus();
       return;
     }
 
-    // Simuler l'envoi (à connecter à un backend/Netlify Forms/Formspree)
-    const btn = form.querySelector('.contact-submit');
-    btn.textContent = 'Envoi en cours…';
-    btn.disabled = true;
+    const formData = new FormData(form);
 
-    setTimeout(() => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => {
       form.reset();
-      btn.textContent = 'Envoyer le message →';
-      btn.disabled = false;
       if (success) {
         success.removeAttribute('hidden');
         success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
-    }, 1200);
+    })
+    .catch(() => {
+      alert('Une erreur est survenue. Merci de réessayer.');
+    });
   });
 
-  // Retirer la classe error au typing
   required.forEach(field => {
     field.addEventListener('input', () => field.classList.remove('error'));
   });
